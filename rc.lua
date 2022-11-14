@@ -510,6 +510,14 @@ clientbuttons = gears.table.join(
 root.keys(globalkeys)
 -- }}}
 
+-- New Client Spawns in Slave Stack
+client.connect_signal("manage", function(c)
+	-- ctrl + super + return sets focused slave to master
+	if not awesome.startup then
+		awful.client.setslave(c)
+	end
+end)
+
 -- {{{ Rules
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
@@ -637,3 +645,10 @@ client.connect_signal("unfocus", function(c)
 	c.border_color = beautiful.border_normal
 end)
 -- }}}
+
+-- Autostart
+awful.spawn.with_shell("polybar")
+-- awful.spawn.with_shell("flameshot")
+-- awful.spawn.with_shell("onboard")
+-- awful.spawn.with_shell("barrier")
+-- awful.spawn.with_shell("feh --bg-fill /home/nebu/Pictures/Wallpapers/w.png")
