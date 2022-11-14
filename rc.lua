@@ -650,7 +650,7 @@ end)
 
 -- Autostart
 awful.spawn.with_shell("polybar")
--- awful.spawn.with_shell("flameshot")
--- awful.spawn.with_shell("onboard")
--- awful.spawn.with_shell("barrier")
--- awful.spawn.with_shell("feh --bg-fill /home/nebu/Pictures/Wallpapers/w.png")
+awful.spawn.with_shell("flameshot")
+awful.spawn.with_shell("onboard")
+awful.spawn.with_shell("barrier")
+awful.spawn.with_shell("feh --bg-fill /home/nebu/Pictures/Wallpapers/w.png")
