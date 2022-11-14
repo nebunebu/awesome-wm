@@ -18,6 +18,8 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+-- dofile("/home/nebu/.config/awesome/keybinds.lua")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -51,13 +53,13 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "xresources/theme.lua")
+beautiful.init("/home/nebu/.config/awesome/theme.lua")
 
 local terminal = "st"
 local editor = os.getenv("EDITOR") or "vi"
 local editor_cmd = terminal .. " -e " .. editor
 local chromium = "chromium"
-local discord = "$HOME/Downloads/Programs/Discord/./Discord"
+local discord = "/home/nebu/Downloads/Programs/Discord/./Discord"
 -- overlay = "discover-overlay"
 --X230T
 -- TODO: scripts for tablet and normal mod in dot files
